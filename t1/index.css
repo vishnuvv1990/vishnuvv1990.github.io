@@ -160,9 +160,9 @@
 
 .feature-card-card {
   flex: 0 0 auto;
-  width: 25%;
+  width: 40%;
   display: flex;
-  max-width: 285px;
+  max-width: 400px;
   align-items: center;
   padding-top: var(--dl-space-space-oneandhalfunits);
   padding-left: var(--dl-space-space-unit);
