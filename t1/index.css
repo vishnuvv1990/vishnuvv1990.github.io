@@ -701,7 +701,7 @@
   padding-right: var(--dl-space-space-oneandhalfunits);
   padding-bottom: var(--dl-space-space-unit);
 }
-.home-icon {
+.email-icon {
   fill: var(--dl-color-grays-gray40);
   width: 20px;
   height: 20px;
