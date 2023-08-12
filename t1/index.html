@@ -27,6 +27,67 @@
         background-color: var(--dl-color-grays-white100);
 
       }
+
+
+
+
+
+
+
+     
+        /* Add your CSS styles here */
+        .modalbg {
+            /* Add your modal background styles */
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .dialog {
+            /* Add your modal dialog styles */
+            background-color: white;
+            width: 70%;
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close {
+            /* Add your close button styles */
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-decoration: none;
+            color: black;
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
     <link
       rel="stylesheet"
@@ -178,11 +239,10 @@
                   </span>
                   
                 </h1>
-                <div class="description">
-                  <p>We BookingsIndia are thinkers and change makers in the domain of Hotel Revenue Management, offering optimization of financial results.</p>            	</div>
                 
                 
                   <div class="home-input-container">
+                    <form action='https://api.formgit.com/64d7a4270cddf.php' method='POST'>
                   <div class="home-container1 input">
                     <svg viewBox="0 0 804.5714285714286 1024" class="home-icon">
                       <path
@@ -191,14 +251,79 @@
                     </svg>
                     <input
                       type="text"
-                      placeholder="Your phone number..."
+                      placeholder="Your email ..."
                       class="home-textinput input"
+                      id="emailInput"
+                      name="email"
                     />
                   </div>
-                  <button class="home-button button-primary button">
+                  <button type="submit" class="home-button button-primary button" >
                     Get started
                   </button>
+                </form>
                 </div>
+
+                <div id="openModal" class="modalbg">
+                  <div class="dialog">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>Holy Crap!!!</h2>
+                    <p>You freakin' did it!</p>
+                    <p>You opened up the freakin' modal window! Now close it, ya dingus.</p>
+                    <p class="fineprint">Based on the article "Creating a modal window with HTML5 & CSS3" at <a href="webdesignerdepot.com">Webdesigner Depot</a></p>
+                    <p class="fineprint">p.s. Sorry for calling you a dingus earlier.</p>
+                  </div>
+                </div>
+
+
+               
+
+                <script>
+                  // Function to get URL parameter by name
+                  function getParameterByName(name, url) {
+                      if (!url) url = window.location.href;
+                      name = name.replace(/[\[\]]/g, '\\$&');
+                      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                          results = regex.exec(url);
+                      if (!results) return null;
+                      if (!results[2]) return '';
+                      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+          
+                  // Check for a "message" parameter in the URL
+                  var messageParam = getParameterByName('message');
+                  if (messageParam) {
+                      // Display the pop-up message
+                     // alert(messageParam);
+                     var modal = document.getElementById('openModal');
+            modal.style.display = 'block';
+
+            // Add click event listener to close link inside modal
+            var closeLink = modal.querySelector('.close');
+            closeLink.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+                  }
+                </script>
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="home-features-container">
                   <div class="home-feature">
                     <svg
