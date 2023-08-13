@@ -140,9 +140,71 @@
 
 
 
+.pulse {
+            position: absolute;
+            top: 75%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: #F67D31;
+            border: 2px solid #F67D31;
+            border-radius: 50%;
+            box-sizing: border-box;
+            box-shadow: 0 0 0 22px #F67D31,
+                    0 0 0 25px #F67D31;
+        }
+  
+        .pulse:before,
+        .pulse:after {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid #F67D31;
+            border-radius: 50%;
+            animation: animate 2s linear infinite
+        }
+  
+        .pulse:after {
+            animation-delay: 1s;
+        }
+  
+        @keyframes animate {
+            0% {
+                transform: scale(2.0);
+            }
+  
+            100% {
+                transform: scale(0.7);
+            }
+        }
+      }
 
 
+      .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F67D31;
+    cursor: pointer;
+    z-index: 1; /* Ensure play button is on top of the circle */
+}
 
+.play-button svg {
+    width: 80%; /* Adjust the size of the SVG play icon */
+    height: 80%; /* Adjust the size of the SVG play icon */
+    fill: #FFF; /* Fill the play icon with white color */
+}
 
 
 
@@ -357,7 +419,7 @@
 
 
 
-                <table><tr><td>
+                
                 <div class="home-input-container">
   <form action='https://api.formgit.com/64d7a642937f1.php' method='POST'>
     <input type="hidden" id="hiddenInput" name="hiddenData" value="From bookingsindia ,PFA email details"/>
@@ -380,7 +442,26 @@
     </div>
   </form>
 </div>
-</td></tr></table>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="pulse">
+  <div class="play-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFF">
+        <path d="M8 5v14l11-7z"/>
+    </svg>
+</div>
+</div>
+
 
 
                 <div id="openModal" class="modalbg">
