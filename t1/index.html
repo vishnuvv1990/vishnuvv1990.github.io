@@ -286,6 +286,171 @@
         }
 
 
+    
+        .flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+   transform: rotateX(180deg); */
+}
+
+
+
+
+/* Style for the flip box */
+.flip-box {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+
+}
+
+/* Style for the inner part of the flip box */
+.flip-box-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+/* Style for the front and back sides of the flip box */
+.flip-box-front,
+.flip-box-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+/* Style for the front side content */
+.front-content-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  height: 100%; /* Set the height to 100% to fill the container */
+  margin: 0; /* Remove any margins */
+}
+
+.front-icon-part {
+  margin-bottom: 10px;
+}
+
+.front-title-part {
+  margin-bottom: 10px;
+}
+
+.front-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.front-desc-part {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.front-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Style for the back side content */
+.flip-box-back {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.back-content-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-title-part {
+  margin-bottom: 10px;
+}
+
+.back-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.back-desc-part {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.back-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.back-btn-part {
+  margin-top: auto;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.back-btn-txt {
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -769,40 +934,39 @@
               </div>
             </div>
           </div>
-          <div class="section-container">
-            <div class="home-max-width3 max-content-container">
-              <div class="home-content-container2">
-                <h1 class="home-text18 Heading2">
-                  <span>The best content, handpicked for you.</span>
-                  <span class="home-text20">In the morning.</span>
-                </h1>
-                <span class="home-text21 Content-Light">
-                  <span>
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit. Velit officia consequat duis enim velit mollit.
-                  </span>
-                  <br />
-                  <span>Lorem ipsum dolor sit amet.</span>
-                </span>
-              </div>
-              <div class="home-image-container2">
-                <img
-                  alt="image"
-                  src="public/section-image2-1200w.png"
-                  class="home-image2"
-                />
-              </div>
-            </div>
-          </div>
+
+
+          
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
           <div class="home-section-four section-container">
             <div class="home-max-width4 max-content-container">
-              <h2 class="home-text24 Heading2">
-                <span>People love Feedbox.</span>
-                <br />
-                <span class="home-text26">So would you.</span>
-                <span class="home-text27"></span>
-              </h2>
+              <span class="subtitle ">Other Services</span>
             </div>
             <div data-type="slider" class="home-slider">
               <div data-type="slide" class="slide-slide slide">
@@ -822,7 +986,7 @@
                     <div class="slide-image-container">
                       <img
                         alt="image"
-                        src="https://images.unsplash.com/photo-1508002366005-75a695ee2d17?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDUxfHxzbWlsZXxlbnwwfHx8fDE2NDM0MDc4MTE&amp;ixlib=rb-1.2.1&amp;w=700"
+                        src="public/ca.png"                        
                         class="slide-image"
                       />
                       <div class="slide-slider-controls">
@@ -845,17 +1009,12 @@
                   </div>
                   <div class="slide-right-side">
                     <span class="slide-testimonial">
-                      <span>
-                        “Love it! I really like the user interface. The sleek
-                        aesthetic of the software makes it easy and pleasant to
-                        use. I am also a big fan of the way I can customize and
-                        organize different feeds and mail sources.”
+                      <span >
+                        Competitor Analysis<br/>
+                        Crucial aspect of digital marketing that involves researching and evaluating the strategies, strengths, weaknesses, opportunities, and threats of your competitors. It provides valuable insights that can help you refine your digital marketing strategies and stay ahead in the competitive landscape.
                       </span>
                     </span>
-                    <span class="slide-author">
-                      <span>Elisabeth Brooke</span>
-                    </span>
-                    <span class="slide-role"><span>Finance Broker</span></span>
+                  
                   </div>
                 </div>
               </div>
@@ -879,7 +1038,7 @@
                     <div class="slide-image-container">
                       <img
                         alt="image"
-                        src="public/vector%202-700w.png"
+                        src="public/analytic.jpg"
                         class="slide-image"
                       />
                       <div class="slide-slider-controls">
@@ -903,14 +1062,11 @@
                   <div class="slide-right-side">
                     <span class="slide-testimonial">
                       <span>
-                        “Stunning app! I use it everyday since I discovered it
-                        and love it every since. It really makes newsreading a
-                        pleasure. I enjoy all the customization options
-                        available, super highly recommended!"
+                        Analytic Solutions</br>
+                        An analytics solution in the context of digital marketing refers to a set of tools, technologies, and methodologies used to gather, process, analyze, and interpret data related to various digital marketing activities. 
                       </span>
                     </span>
-                    <span class="slide-author"><span>Bill Smith</span></span>
-                    <span class="slide-role"><span>DESIGN DIRECTOR</span></span>
+                   
                   </div>
                 </div>
               </div>
@@ -934,7 +1090,7 @@
                     <div class="slide-image-container">
                       <img
                         alt="image"
-                        src="public/vector%202%20%5B2%5D-700w.png"
+                        src="public/keyres1.jpg"
                         class="slide-image"
                       />
                       <div class="slide-slider-controls">
@@ -958,116 +1114,386 @@
                   <div class="slide-right-side">
                     <span class="slide-testimonial">
                       <span>
-                        “Feedbox is very easy to use and flexible! I especially
-                        like the pre-made templates that are accessible; they're
-                        extraordinary for monitoring a few feed sources and
-                        various RSS Feeds together.”
-                      </span>
+                        Keyword research <br/>Fundamental aspect of digital marketing and search engine optimization (SEO). It involves identifying the specific words and phrases that people use when searching online for products, services, information, or solutions related to your business. </span>
                     </span>
-                    <span class="slide-author"><span>Julia Xang</span></span>
-                    <span class="slide-role">
-                      <span>FREELANCE WRITER</span>
-                    </span>
+                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+
           <div class="section-container">
             <div class="home-max-width5 max-content-container">
               <div class="home-heading-container">
+                <span class="subtitle ">Services</span> 
                 <h2 class="home-text28 Heading2">
-                  <span>If you love simplicity, you’ll</span>
+                  <span>Increase Your Sales Now with</span>
                   <br />
-                  <span>simply love</span>
-                  <span class="home-text31">Feedbox.</span>
+                  <span>Valued Services</span>
+                 
                 </h2>
-                <span class="Content-Light">
-                  <span>
-                    Go to App Store, install Feedbox and start changing your
-                    reading habits to
-                  </span>
-                  <span class="home-text34"></span>
-                  <span>day!</span>
-                </span>
+                
               </div>
-              <div class="home-get-the-app">
-                <img
-                  alt="image"
-                  src="public/frame-1200w.png"
-                  class="home-image3"
-                />
-                <img
-                  alt="image"
-                  src="public/frame%2034-200h.png"
-                  class="home-image4"
-                />
-              </div>
+              
               <div class="home-cards-container1">
                 <div class="grid-card-grid-card">
-                  <img
-                    alt="image"
-                    src="public/vector%203-200h.png"
-                    class="grid-card-image"
-                  />
-                  <span class="grid-card-text">
-                    <span>Challange yourself</span>
-                  </span>
-                  <span class="Content-Light">
-                    <span>
-                      Lorem ipsum dolor sit amet. Velit officia lorem ipsum
-                      dolor consequat duis enim velit mollit.​
-                    </span>
-                  </span>
+                  
+                  <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <div class="front-content-part">
+                          <div class="front-icon-part">
+                            <span class="front-img">
+                                <img width="150" height="150" src="public/profits-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="public/profits-150x150.png 150w, public/profits-100x100.png 100w, public/profits.png 256w" sizes="(max-width: 150px) 100vw, 150px">                                    </span>
+                                  </div>
+
+                          <div class="front-title-part">
+      <h2 class="front-title"> Revenue Management</h2>                                
+  </div>
+
+                          <div class="front-desc-part">
+      <p class="front-desc">We apply disciplined analytics that predict consumer behaviour at the micro-market level and optimize product availability and price to maximize revenue growth. </p>
+  </div>
+
+
+</div>
+                      </div>
+                      <div class="flip-box-back">
+                        <div class="back-content-part">
+                        
+                          <div class="back-title-part">
+                                          <h2 class="back-title"> Revenue Management</h2>
+                                  </div>
+
+                          <div class="back-desc-part">
+      <p class="back-desc">Our primary aim is selling the right product to the right customer at the right time for the right price and with the right pack.</p>
+  </div>
+
+                          <div class="back-btn-part">
+      <a class="back-btn " href="">
+          <span class="back-btn-txt">View More</span>
+                                          </a>
+  </div>
+                  </div>
+                      </div>
+                    </div>
+                  </div>  
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="grid-card-grid-card">
-                  <img
-                    alt="image"
-                    src="public/vector%203%20%5B1%5D-200h.png"
-                    class="grid-card-image"
-                  />
-                  <span class="grid-card-text">
-                    <span>Follow your friends</span>
-                  </span>
-                  <span class="Content-Light">
-                    <span>
-                      Lorem ipsum dolor sit amet. Velit officia lorem ipsum
-                      dolor consequat duis enim velit mollit.​
-                    </span>
-                  </span>
+                  <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <div class="front-content-part">
+                          <div class="front-icon-part">
+                            <span class="front-img">
+                              <img width="150" height="150" src="public/lightbulb-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="public/lightbulb-150x150.png 150w, public/lightbulb-100x100.png 100w, public/lightbulb.png 256w" sizes="(max-width: 150px) 100vw, 150px">                                  </div>
+
+                          <div class="front-title-part">
+                            <h2 class="front-title"> Hotel Channel Distribution</h2>                               
+  </div>
+
+                          <div class="front-desc-part">
+                            We ensure to feature and represent our hoteliers across all online distribution channels including OTAs, GDS &amp; Brand Website  </div>
+
+
+</div>
+                      </div>
+                      <div class="flip-box-back">
+                        <div class="back-content-part">
+                        
+                          <div class="back-title-part">
+                            <h2 class="back-title"> Hotel Channel Distribution</h2>
+                                  </div>
+
+                          <div class="back-desc-part">
+      <p class="back-desc">
+        We do conduct regular channel analysis to visualize the correct  mix on distribution for effective revenue growth from all available sources.      </p>
+  </div>
+
+                          <div class="back-btn-part">
+      <a class="back-btn " href="">
+          <span class="back-btn-txt">View More</span>
+                                          </a>
+  </div>
+                  </div>
+                      </div>
+                    </div>
+                  </div>  
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="grid-card-grid-card">
-                  <img
-                    alt="image"
-                    src="public/vector%203%20%5B2%5D-200h.png"
-                    class="grid-card-image"
-                  />
-                  <span class="grid-card-text">
-                    <span>Declutter your life inbox</span>
-                  </span>
-                  <span class="Content-Light">
-                    <span>
-                      Lorem ipsum dolor sit amet. Velit officia lorem ipsum
-                      dolor consequat duis enim velit mollit.​
-                    </span>
-                  </span>
+                  <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <div class="front-content-part">
+                          <div class="front-icon-part">
+                            <span class="front-img">
+<img width="150" height="150" src="public/laptop-screen-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="public/laptop-screen-150x150.png 150w, public/laptop-screen-100x100.png 100w, public/laptop-screen.png 256w" sizes="(max-width: 150px) 100vw, 150px">                                  </div>
+
+                          <div class="front-title-part">
+                            <h2 class="front-title"> Yield Management</h2>  </div>
+
+                          <div class="front-desc-part">
+      <p class="front-desc">
+        We use variable pricing strategy, based on understanding, anticipating and influencing consumer behavior.       </p>
+  </div>
+
+
+</div>
+                      </div>
+                      <div class="flip-box-back">
+                        <div class="back-content-part">
+                        
+                          <div class="back-title-part">
+                                          <h2 class="back-title">  Yield Management</h2>
+                                  </div>
+
+                          <div class="back-desc-part">
+      <p class="back-desc">
+        We maximize revenue or profits from hotel room which is a fixed & perishable resource      </p>
+  </div>
+
+                          <div class="back-btn-part">
+      <a class="back-btn " href="">
+          <span class="back-btn-txt">View More</span>
+                                          </a>
+  </div>
+                  </div>
+                      </div>
+                    </div>
+                  </div>  
                 </div>
+
+
+
+
+
+
+
+
                 <div class="grid-card-grid-card">
-                  <img
-                    alt="image"
-                    src="public/vector%203%20%5B3%5D-200h.png"
-                    class="grid-card-image"
-                  />
-                  <span class="grid-card-text">
-                    <span>Less apps, more space</span>
-                  </span>
-                  <span class="Content-Light">
-                    <span>
-                      Lorem ipsum dolor sit amet. Velit officia lorem ipsum
-                      dolor consequat duis enim velit mollit.​
-                    </span>
-                  </span>
+                  <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <div class="front-content-part">
+                          <div class="front-icon-part">
+                            <span class="front-img">
+                              <img width="150" height="150" src="public/shield-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="public/shield-150x150.png 150w, public/shield-100x100.png 100w, public/shield.png 256w" sizes="(max-width: 150px) 100vw, 150px">                                  </div>
+
+                          <div class="front-title-part">
+      <h2 class="front-title"> Reputation Management & Brand Building</h2>                                
+  </div>
+
+                          <div class="front-desc-part">
+      <p class="front-desc">
+        We assist and use specialized skills and tools to establish a positive online presence for our partners and improve their visibility, helps to suppress negative search results.       </p>
+  </div>
+
+
+</div>
+                      </div>
+                      <div class="flip-box-back">
+                        <div class="back-content-part">
+                        
+                          <div class="back-title-part">
+                                          <h2 class="back-title">  Reputation Management & Brand Building</h2>
+                                  </div>
+
+                          <div class="back-desc-part">
+      <p class="back-desc">
+        We manage online reviews on all social media platforms. Guidance in SEO also provided to improve hotel ranking in multiple search engines & platforms.      </p>
+  </div>
+
+                          <div class="back-btn-part">
+      <a class="back-btn " href="">
+          <span class="back-btn-txt">View More</span>
+                                          </a>
+  </div>
+                  </div>
+                      </div>
+                    </div>
+                  </div>  
+
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="grid-card-grid-card">
+                  <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <div class="front-content-part">
+                          <div class="front-icon-part">
+                            <span class="front-img">
+                              <img width="150" height="150" src="public/vector-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="public/vector-150x150.png 150w, public/vector-100x100.png 100w, public/vector.png 256w" sizes="(max-width: 150px) 100vw, 150px">                                  </div>
+
+                          <div class="front-title-part">
+      <h2 class="front-title">  Comprehensive Market Analysis</h2>                                
+  </div>
+
+                          <div class="front-desc-part">
+      <p class="front-desc">
+        Business Development and Performance check across various platforms 
+        for incremental growth through different business sources / channels
+              </p>
+  </div>
+
+
+</div>
+                      </div>
+                      <div class="flip-box-back">
+                        <div class="back-content-part">
+                        
+                          <div class="back-title-part">
+                                          <h2 class="back-title">  Comprehensive Market Analysis</h2>
+                                  </div>
+
+                          <div class="back-desc-part">
+      <p class="back-desc">
+        Monthly reports to be submitted to hotel management for budget preparation
+        and plan marketing and sales plans ahead of time.      </p>
+  </div>
+
+                          <div class="back-btn-part">
+      <a class="back-btn " href="">
+          <span class="back-btn-txt">View More</span>
+                                          </a>
+  </div>
+                  </div>
+                      </div>
+                    </div>
+                  </div>  
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="grid-card-grid-card">
+                  <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <div class="front-content-part">
+                          <div class="front-icon-part">
+                            <span class="front-img">
+                              <img width="150" height="150" src="public/tools-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="public/tools-150x150.png 150w, public/tools-100x100.png 100w, public/tools.png 256w" sizes="(max-width: 150px) 100vw, 150px">                                  </div>
+
+                          <div class="front-title-part">
+                            <h2 class="front-title"> In-depth Business Forecasting</h2>  </div>
+
+                          <div class="front-desc-part">
+      <p class="front-desc">
+        Based on past and future trends of pricing, market segment analysis,availability 
+        and demand trends.      </p>
+  </div>
+
+
+</div>
+                      </div>
+                      <div class="flip-box-back">
+                        <div class="back-content-part">
+                        
+                          <div class="back-title-part">
+                                          <h2 class="back-title"> In-depth Business Forecasting</h2>
+                                  </div>
+
+                          <div class="back-desc-part">
+      <p class="back-desc">
+        Competition analytics & review, seasons or city events.      </p>
+  </div>
+
+                          <div class="back-btn-part">
+      <a class="back-btn " href="">
+          <span class="back-btn-txt">View More</span>
+                                          </a>
+  </div>
+                  </div>
+                      </div>
+                    </div>
+                  </div>  
+
+                </div>
+
+
+
+
+
+
+
+
               </div>
             </div>
           </div>
@@ -1075,14 +1501,14 @@
             <div class="home-max-width6 max-content-container">
               <div class="home-content-container3">
                 <h1 class="home-text36 Heading2">
-                  <span>Get started today.</span>
+                  <span>Contact Us</span>
                   <br />
-                  <span class="home-text38">Try free for 30 days.</span>
+                  <!-- <span class="home-text38">Feel free to connect with us </span> -->
                 </h1>
-                <span class="home-text39 Content-Light">
+                <!-- <span class="home-text39 Content-Light">
                   Go to App Store, install Feedbox and start changing your
                   reading habbits today!
-                </span>
+                </span> -->
                 <div class="home-input-container1">
                   <div class="home-container2 input">
                     <svg
@@ -1114,7 +1540,7 @@
                       ></path>
                     </svg>
                     <span class="home-text40">
-                      Easiest way to read news and RSS Feeds.
+                      Mobile : +91 7350600300
                     </span>
                   </div>
                   <div class="home-feature4">
@@ -1127,10 +1553,10 @@
                       ></path>
                     </svg>
                     <span class="home-text41">
-                      Works with all mail providers, including Google and Yahoo.
+                      Email : support@bookingsindia.com , biju.nair@bookingsindia.com
                     </span>
                   </div>
-                  <div class="home-feature5">
+                  <!-- <div class="home-feature5">
                     <svg
                       viewBox="0 0 877.7142857142857 1024"
                       class="home-icon14"
@@ -1142,16 +1568,16 @@
                     <span class="home-text42">
                       Over 2000, highly recommended customer reviews.
                     </span>
-                  </div>
+                  </div> -->
                 </div>
               </div>
-              <div class="home-image-container3">
+              <!-- <div class="home-image-container3">
                 <img
                   alt="image"
                   src="public/group%2032-1200w.png"
                   class="home-image5"
                 />
-              </div>
+              </div> -->
             </div>
           </div>
         </main>
