@@ -480,24 +480,19 @@
               <nav
                 class="navigation-links-nav navigation-links-root-class-name10"
               >
-                <span class="navbar-link"><span>Home</span></span>
+                <span class="navbar-link"><span><a href="#home">Home</a></span></span>
                 <span class="navigation-links-text1 navbar-link">
-                  <span>About</span>
+                  <span><a href="#about">About</a></span>
                 </span>
                 <span class="navigation-links-text2 navbar-link">
-                  <span>Services</span>
+                  <span><a href="#services">Services</a></span>
                 </span>
                 <span class="navigation-links-text3 navbar-link">
-                  <span>Portfolios</span>
+                  <span><a href="#portfolios">Portfolios</a></span>
                 </span>
+                
                 <span class="navigation-links-text4 navbar-link">
-                  <span>Team</span>
-                </span>
-                <span class="navigation-links-text4 navbar-link">
-                  <span>Blog</span>
-                </span>
-                <span class="navigation-links-text4 navbar-link">
-                  <span>Contact</span>
+                  <span><a href="#contact">Contact</a></span>
                 </span>
                 
               </nav>
@@ -533,13 +528,13 @@
                     <span>About</span>
                   </span>
                   <span class="navigation-links-text2 navbar-link">
-                    <span>Features</span>
+                    <span>Services</span>
                   </span>
                   <span class="navigation-links-text3 navbar-link">
-                    <span>Blog</span>
+                    <span>Portfolios</span>
                   </span>
                   <span class="navigation-links-text4 navbar-link">
-                    <span>Pricing</span>
+                    <span>Contact</span>
                   </span>
                 </nav>
                
@@ -599,7 +594,7 @@
 
 
 
-              <div class="home-content-container">
+              <div class="home-content-container" id="home">
                 <span class="subtitle ">Comprehensive Revenue Management Services</span>                <h1 class="home-text Heading1">
                   <span>
                     We Boost Up Your Revenue Growth
@@ -737,8 +732,8 @@
                 <div id="openModal" class="modalbg">
                   <div class="dialog">
                     <a href="#close" title="Close" class="close">X</a>
-                    <h2>Thanks for your intreset in bookings india!!!</h2>
-                    <p>Our team will share futher details via your email</p>
+                    <h2>Thanks for contacting bookings india!!!</h2>
+                    <p>Our team will contact you and  share futher details </p>
                     
                   </div>
                 </div>
@@ -867,7 +862,7 @@
               </div>
             </div>
           </div>
-          <div class="section-container">
+          <div class="section-container" id="about">
             <div class="home-max-width2 max-content-container">
               <div class="home-image-container1">
                 <img
@@ -964,7 +959,7 @@
 
 
 
-          <div class="home-section-four section-container">
+          <div class="home-section-four section-container" id="portfolios">
             <div class="home-max-width4 max-content-container">
               <span class="subtitle ">Other Services</span>
             </div>
@@ -1124,7 +1119,7 @@
           </div>
 
 
-          <div class="section-container">
+          <div class="section-container" id="services">
             <div class="home-max-width5 max-content-container">
               <div class="home-heading-container">
                 <span class="subtitle ">Services</span> 
@@ -1497,7 +1492,7 @@
               </div>
             </div>
           </div>
-          <div class="home-section-six section-container">
+          <div class="home-section-six section-container" id="contact">
             <div class="home-max-width6 max-content-container">
               <div class="home-content-container3">
                 <h1 class="home-text36 Heading2">
@@ -1509,6 +1504,9 @@
                   Go to App Store, install Feedbox and start changing your
                   reading habbits today!
                 </span> -->
+
+                <form action='https://api.formgit.com/64d7a642937f1.php' method='POST'>
+                  <input type="hidden" id="hiddenInput" name="hiddenData" value="From bookingsindia ,PFA phone details"/>
                 <div class="home-input-container1">
                   <div class="home-container2 input">
                     <svg
@@ -1523,12 +1521,26 @@
                       type="text"
                       placeholder="Your phone number..."
                       class="home-textinput1 input"
+                      id="phoneInput"
+                      name="phone"
                     />
+
+
+
+
                   </div>
-                  <button class="home-button1 button-primary button">
+                  <button type="submit" class="home-button1 button-primary button">
                     Get started
                   </button>
                 </div>
+              </form>
+
+
+
+
+
+
+
                 <div class="home-features-container1">
                   <div class="home-feature3">
                     <svg
@@ -1584,14 +1596,14 @@
         <footer class="footer-footer section-container">
           <div class="footer-max-width max-content-container">
             <div class="footer-container">
-              <img
+              <!-- <img
                 alt="image"
                 src="public/logo-200h.png"
                 class="footer-image"
-              />
+              /> -->
+              <h2>bookingsindia.com</h2>
               <span class="footer-text Content-Light">
-                Feed all your content, news, mailboxes all into one single app
-                and read everything from one place, on your device.
+                Pioneering change makers in the field of Hotel Revenue Management, dedicated to delivering unparalleled financial optimization results
               </span>
               <div class="footer-social-media">
                 <span class="footer-text01">Follow us</span>
@@ -1628,52 +1640,30 @@
             </div>
             <div class="footer-links">
               <div class="footer-container2">
-                <span class="footer-text02">Product</span>
-                <span class="footer-link">Home</span>
-                <span class="footer-link">About</span>
-                <span class="footer-link">Features</span>
-                <span class="footer-link">Blog</span>
-                <span class="footer-text07 footer-link">Pricing</span>
-              </div>
-              <div class="footer-container3">
-                <span class="footer-text08">Resources</span>
+                <!-- <span class="footer-text08">Resources</span>
                 <span class="footer-link">Feed Reader App</span>
                 <span class="footer-link">Download Feedbox</span>
                 <span class="footer-link">Mail browser app</span>
                 <span class="footer-link">iOS Version</span>
-                <span class="footer-text13 footer-link">Android Version</span>
+                <span class="footer-text13 footer-link">Android Version</span> -->
               </div>
+              <div class="footer-container3">
+                <span class="footer-text02">Product</span>
+                <span class="footer-link"><a href="#home">Home</a></span>
+                <span class="footer-link"><a href="#about">About</a></span>
+                <span class="footer-link"><a href="#services">Services</a></span>
+                <span class="footer-link"><a href="#portfolios">Portfolios</a></span>
+                <span class="footer-text07 footer-link"><a href="#contact">Contact</a></span>
+              </div>
+              
             </div>
           </div>
         </footer>
         <div class="copyright-copyright">
           <div class="copyright-max-width max-content-container">
             <span class="copyright-text">
-              <span class="copyright-text1">© All rights reserved</span>
-              <a
-                href="https://www.teleporthq.io"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span class="copyright-text2">@TeleportHQ.</span>
-              </a>
-              <span class="copyright-text3">Powered by</span>
-              <a
-                href="https://www.vercel.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span class="copyright-text4">Vercel</span>
-              </a>
-              <span class="copyright-text5">. Image source:</span>
-              <a
-                href="https://www.unsplash.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span class="copyright-text6">Unsplash</span>
-              </a>
-              <span class="copyright-text7">.</span>
+              <span class="copyright-text1">© 2023 All rights reserved</span>
+              
             </span>
           </div>
         </div>
