@@ -448,6 +448,35 @@
 
 
 
+@keyframes wobble {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+
+
+.wobble-element {
+  display: inline-block;
+  font-size: 24px;
+  transition: transform 0.1s ease-in-out; /* Add a smooth transition */
+}
+
+.wobble-element:hover {
+  animation: wobble .5s infinite; /* Start the animation on hover */
+}
+
+
+
 
 
 
@@ -811,11 +840,12 @@
               </h2>
               <div class="home-cards-container">
                 <div class="feature-card-card">
+                  <div class="wobble-element">
                   <img
                     alt="image"
                     src="public/performance.png"
                     class="feature-card-image"
-                  />
+                  /></div>
                   <h4 class="feature-card-text Heading4">
                     <span>Proven Performance</span>
                   </h4>
@@ -827,11 +857,12 @@
                   
                 </div>
                 <div class="feature-card-card">
+                  <div class="wobble-element">
                   <img
                     alt="image"
                     src="public/analysis.png"
                     class="feature-card-image"
-                  />
+                  /></div>
                   <h4 class="feature-card-text Heading4">
                     <span>Transparent ROI Tracking</span>
                   </h4>
@@ -843,11 +874,12 @@
                   
                 </div>
                 <div class="feature-card-card">
+                  <div class="wobble-element">
                   <img
                     alt="image"
                     src="public/target3.png"
                     class="feature-card-image"
-                  />
+                  /></div>
                   <h4 class="feature-card-text Heading4">
                     <span>Unparalleled Track Record</span>
                   </h4>
