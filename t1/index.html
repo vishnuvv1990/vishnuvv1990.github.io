@@ -184,6 +184,33 @@
       }
 
 
+
+      .outer-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 2px solid #F67D31;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 32px #F67D31,
+                0 0 0 35px #F67D31;
+    animation: outerAnimate 8s linear infinite;
+}
+
+@keyframes outerAnimate {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
       .play-button {
     position: absolute;
     top: 50%;
@@ -201,14 +228,62 @@
 }
 
 .play-button svg {
-    width: 80%; /* Adjust the size of the SVG play icon */
-    height: 80%; /* Adjust the size of the SVG play icon */
+    width: 90%; /* Adjust the size of the SVG play icon */
+    height: 90%; /* Adjust the size of the SVG play icon */
     fill: #FFF; /* Fill the play icon with white color */
 }
 
 
 
 
+
+
+
+
+ /* Styles for the play button icon */
+ .popup-border {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .popup-border .fa-play {
+            font-size: 50px;
+            color: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Styles for the video popup */
+        .video-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-popup iframe {
+            width: 70%;
+            height: 70%;
+        }
+
+        /* Styles for the close button */
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
 
 
 
@@ -455,12 +530,42 @@
 
 
 <div class="pulse">
+  <div class="outer-pulse"></div>
+  <a class="popup-border popup-videos" onclick="openVideoPopup()">
+    <i class="fa fa-play"></i>
+  
   <div class="play-button">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFF">
         <path d="M8 5v14l11-7z"/>
     </svg>
+  </a>
 </div>
 </div>
+<!-- Video popup -->
+<div class="video-popup" id="videoPopup">
+  <span class="close-button" onclick="closeVideoPopup()">&times;</span>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/YLN1Argi7ik" frameborder="0" allowfullscreen></iframe>
+</div>
+<script>
+  // JavaScript function to open the video popup
+  function openVideoPopup() {
+      var popup = document.getElementById("videoPopup");
+      popup.style.display = "flex"; // Show the popup
+  }
+
+  // JavaScript function to close the video popup
+  function closeVideoPopup() {
+      var popup = document.getElementById("videoPopup");
+      popup.style.display = "none"; // Hide the popup
+  }
+</script>
+
+
+
+
+
+
+
 
 
 
